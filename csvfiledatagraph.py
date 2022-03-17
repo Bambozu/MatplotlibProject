@@ -1,8 +1,23 @@
 import csv
 import numpy as np
+from collections import Counter
 import matplotlib.pyplot as plt
 
 plt.style.use('fivethirtyeight') # a style
+
+with open('systemUsage.csv') as csv_file:
+    csv_reader = csv.DictReader(csv_file)
+
+    cpu_counter = Counter()
+
+    for row in csv_reader:
+        cpu_counter.update(row = next(csv_reader))
+print(cpu_counter)
+
+
+
+
+
 #plt.xkcd() # a method (comic looking style)
 
 
