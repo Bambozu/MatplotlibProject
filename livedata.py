@@ -16,6 +16,3 @@ def animate(i):
     plt.tight_layout()
 
 ani = FuncAnimation(plt.gcf(), animate, interval = 1000)
-
-"""
-https://www.youtube.com/watch?v=38Kxtf52EcI"""
